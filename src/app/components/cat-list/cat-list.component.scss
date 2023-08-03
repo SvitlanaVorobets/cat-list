@@ -1,0 +1,40 @@
+.cat__list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 10px;
+    gap: 10px;
+}
+
+.filter-container{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.warning{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.spinner__loading {
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 1000px){
+    .cat__list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px){
+    .cat__list{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .filter-container{
+        display: block;
+    }
+}

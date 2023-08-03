@@ -1,0 +1,15 @@
+<div class="cat-item">
+    <img class="cat-item__img" [src]="cat.url" alt="cat.id" [width]="cat.width" [height]="cat.height">
+    <p>ID: {{ cat.id }}</p>
+    <span>Breed: </span>
+    <ng-container *ngIf="cat.breeds.length; then breedsList; else noBreeds">
+    </ng-container>
+    
+    <ng-template #breedsList>
+        <span *ngFor="let breed of cat.breeds">{{ breed.name }}</span>
+    </ng-template>
+    
+    <ng-template #noBreeds>
+        <span>Not specified</span>
+    </ng-template>
+</div>
